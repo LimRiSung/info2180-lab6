@@ -1,16 +1,17 @@
 // JavaScript File
 window.onload = function() {
     
-    var loadBtn = document.getElementById("loadBtn");
+    var submitBtn = document.getElementById("submitBtn");
     var  httpRequest;
 
-loadBtn.addEventListener('click', function(e) {
+submitBtn.addEventListener('click', function(e) {
     
     e.preventDefault();
+    var formdata = document.getElementById("search-term").value;
     httpRequest = new XMLHttpRequest();
     
     //GET Request
-    var url = "request.php?q=definition";
+    var url = "request.php?q=" + "" + formdata;
     httpRequest.onreadystatechange = loadDefinition;
     httpRequest.open('GET', url);
     httpRequest.send();
@@ -23,8 +24,7 @@ function loadDefinition()
         if (httpRequest.status === 200)
         {
             var response = httpRequest.responseText;
-            alert(response);
-            //alert(response.definition);
+            document.getElementById("result").innerHTML = "" + response;
         }
         else 
         {
