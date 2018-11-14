@@ -3,6 +3,7 @@ h1 {
     color: white;
 }
 
-#submitBtn {
+.btn {
     background-color: rgb(74, 193, 181);
 }
+

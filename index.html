@@ -2,9 +2,7 @@
 <html>
     <head>
         <title>Web Dictionary</title>
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-         <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="styles.css" type="text/css"/>
         <script src = "app.js" type = "text/javascript"></script>
     </head>
     <body>
@@ -14,10 +12,12 @@
              <form id = "searchForm" action = "" method="get">
                  <input type = "text" name = "search-term" id ="search-term">
                  <button type = "button" id = "submitBtn" class = "btn">Submit</button>
+                 <button type = "button" id = "getAllDefinitions" class = "btn">Get All Definitions</button>
              </form>
              <hr>
              <h2>Result</h2>
-             <div id = "result"></div>
+             <div id = "results"></div>
          </div>
+         
     </body>
 </html>
